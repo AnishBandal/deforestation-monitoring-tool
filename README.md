@@ -1,12 +1,13 @@
 # 🌳 Deforestation Monitoring Tool
 
-![Project Banner](https://via.placeholder.com/1200x300.png?text=Deforestation+Monitoring+Tool)
+![Project Banner](assets/banner.png)
 
 <p align="center">
   <img src="https://img.shields.io/badge/Status-Completed-brightgreen" />
   <img src="https://img.shields.io/badge/Web-App-blue" />
   <img src="https://img.shields.io/badge/QGIS-Analysis-green" />
   <img src="https://img.shields.io/badge/NDVI-Supported-lightgrey" />
+  <img src="https://img.shields.io/badge/License-MIT-yellow" />
 </p>
 
 > **A full-stack solution for detecting and visualizing deforestation using Google Earth Engine and QGIS with Sentinel-2 and Landsat-8 imagery.**
@@ -17,25 +18,26 @@
 This project consists of two integrated modules:
 
 - 🌐 **Web App**: A Flask + Google Earth Engine-powered platform to generate NDVI maps based on user input (coordinates, radius, year).
-- 🛰️ **QGIS Analysis**: A QGIS project that provides time-series NDVI comparison for Mumbai, Navi Mumbai, and Thane between 2016 and 2024.
+- 🚁 **QGIS Analysis**: A QGIS project that provides time-series NDVI comparison for Mumbai, Navi Mumbai, and Thane between 2016 and 2024.
 
 ---
 
 ## 🗂 Repository Structure
-```bash
+```
 deforestation-monitoring-tool/
 ├── web-app/               # Flask Web Application
 │   ├── backend/           # Python + GEE logic
-│   ├── frontend/         # HTML templates
+│   ├── frontend/          # HTML templates
 │
 ├── qgis-analysis/         # NDVI Analysis using QGIS
 │   ├── sentinel/          # Sentinel-2 imagery & project
-│   ├── landsat/           # Landsat-8 imagery & project
-│   └── stats_and_charts/  # CSVs & Graphs
+│   └── landsat/           # Landsat-8 imagery & project
 │
-├── report/                # Final Report and Presentation
-│   ├── Mini_Project_Report.pdf
-│   └── Presentation_Slides.pptx
+├── report/                # Final Report
+│   └── Mini_Project_Report.pdf
+│
+├── assets/                # Banner & screenshots
+│   └── screenshots/       # Screenshots go here
 │
 ├── LICENSE
 └── README.md
@@ -56,72 +58,80 @@ deforestation-monitoring-tool/
 ## ⚙️ Installation
 ### 🔧 Web App
 ```bash
-git clone https://github.com/<username>/deforestation-monitoring-tool.git
+git clone https://github.com/AnishBandal/deforestation-monitoring-tool.git
 cd deforestation-monitoring-tool/web-app/backend
 python3 -m venv venv
-source venv/bin/activate   # or venv\Scripts\activate for Windows
+source venv/bin/activate   # or venv\Scripts\activate on Windows
 pip install -r requirements.txt
 earthengine authenticate
 flask run
 ```
 Visit `http://127.0.0.1:5000` in your browser.
 
-### 🛰 QGIS Analysis
+---
+
+### 🚁 QGIS Analysis
 1. Open `.qgz` files from the `qgis-analysis/` folder in QGIS Desktop.
-2. Load 2016 and 2024 TIFF files.
-3. Use raster calculator for NDVI difference.
-4. Review output layers, export graphs and stats.
+2. Load the corresponding TIFF images (2016–2024).
+3. Use the raster calculator for NDVI difference analysis.
+4. Export visual results and statistics.
 
 ---
 
 ## 🎯 Features
-- 🗺 Generate dynamic NDVI maps based on location, radius, and year.
-- 📊 Statistical summaries of vegetation health and loss.
-- 📍 Region-wise QGIS projects for Mumbai Metropolitan areas.
-- 📈 Visual charts and CSV outputs for change detection.
+- 🗽 Generate NDVI vegetation loss maps dynamically.
+- 📊 Stats & charts to track vegetation health loss over time.
+- 🌍 Region-based QGIS NDVI comparisons (Mumbai, Navi Mumbai, Thane).
+- 🧾 Final PDF report included.
 
 ---
 
 ## 📸 Screenshots
+
 <p float="left">
-  <img src="https://via.placeholder.com/400x250.png?text=Web+Map" width="45%" />
-  <img src="https://via.placeholder.com/400x250.png?text=QGIS+NDVI+Comparison" width="45%" />
+  <img src="assets/screenshots/web-map.png" width="45%" />
+  <img src="assets/screenshots/ndvi-sentinel-map.png" width="45%" />
 </p>
 
----
-
-## 📁 Sample Output
-- HTML Map (Folium)
-- NDVI Raster Files
-- Comparative Charts (2016 vs 2024)
-- Ground Truth Reference
+> Add screenshots to `assets/screenshots/` folder and reference above.
 
 ---
 
-## 🤝 Contributing
-We welcome contributions!
-```bash
-git checkout -b feature/your-feature
-# Make changes
-git commit -m "Add your feature"
-git push origin feature/your-feature
-```
-Open a Pull Request with your description.
+## 🗃️ TIFF Data Download (Google Drive)
+
+Due to GitHub file size limits, NDVI `.tif` files are hosted externally:
+
+📅 **[Download TIFF files from Google Drive](https://drive.google.com/drive/folders/1HEhRcsDEIwpjgBGQPrHKBqRZ1mA7E8KV?usp=sharing)**
+
+Includes:
+- Sentinel & Landsat True Color Map of 2016 
 
 ---
 
-## 📄 License
-This project is licensed under the **MIT License**. See [LICENSE](LICENSE) for more.
+## 📄 Project Report
+- [📘 Mini Project Report (PDF)](report/Mini_Project_Report.pdf)
 
 ---
 
 ## 👤 Authors
-- **Anish Ganesh Bandal**  
-  BTech IT, Vidyalankar Institute of Technology
+
+**Anish Ganesh Bandal**  
+🎓 BTech IT, Vidyalankar Institute of Technology  
+🔗 [GitHub](https://github.com/AnishBandal)
+
+**Mukta Redij**  
+🎓 BTech IT, Vidyalankar Institute of Technology  
+🔗 [GitHub](https://github.com/MuktaRedij)
+
+**Atharva Gitaye**  
+🎓 BTech IT, Vidyalankar Institute of Technology  
+🔗 [GitHub](https://github.com/atharvagitaye)
+
 
 ---
 
-## 📬 Contact
-📧 anishbandal@email.com  
-🔗 [GitHub Profile](https://github.com/AnishBandal)
+## 📄 License
+
+This project is licensed under the **MIT License**.  
+See the full [LICENSE](LICENSE) file for details.
 
