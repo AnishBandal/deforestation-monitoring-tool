@@ -89,7 +89,7 @@ Visit `http://127.0.0.1:5000` in your browser.
 ## 📸 Screenshots
 
 <p float="left">
-  <img src="assets/screenshots/web-map.png" width="45%" />
+  <img src="assets/screenshots/web-app.png" width="45%" />
   <img src="assets/screenshots/ndvi-sentinel-map.png" width="45%" />
 </p>
 
